@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>Servlet</display-name>
+  <servlet>
+<servlet-name>addition</servlet-name>
+<servlet-class>com.Basic.AddServlet</servlet-class>
+<init-param>
+<param-name>jdbcDriver</param-name>
+<param-value>com.mysql.jdbc.jdbcDriver</param-value>
+
+</init-param>
+
+</servlet>
+<servlet>
+<servlet-name>second</servlet-name>
+<servlet-class>com.Basic.SecondServlet</servlet-class>
+</servlet>
+
+
+<servlet>
+<servlet-name>third</servlet-name>
+<servlet-class>com.Basic.ThirdServlet</servlet-class>
+</servlet>
+
+<servlet>
+<servlet-name>include</servlet-name>
+<servlet-class>com.Basic.IncludeServlet</servlet-class>
+</servlet>
+
+<servlet>
+<servlet-name>footer</servlet-name>
+<servlet-class>com.Basic.FooterServlet</servlet-class>
+</servlet>
+
+<servlet>
+<servlet-name>header</servlet-name>
+<servlet-class>com.Basic.HeaderServlet</servlet-class>
+</servlet>
+
+<servlet>
+<servlet-name>redirect</servlet-name>
+<servlet-class>com.Basic.ReDirectServlet</servlet-class>
+</servlet>
+
+
+
+<servlet-mapping>
+<servlet-name>addition</servlet-name>
+<url-pattern>/add</url-pattern>
+</servlet-mapping>
+  
+  <servlet-mapping>
+<servlet-name>second</servlet-name>
+<url-pattern>/sec</url-pattern>
+</servlet-mapping>
+  
+  <servlet-mapping>
+<servlet-name>third</servlet-name>
+<url-pattern>/third</url-pattern>
+</servlet-mapping>
+  
+  
+  <servlet-mapping>
+<servlet-name>include</servlet-name>
+<url-pattern>/include</url-pattern>
+</servlet-mapping>
+
+
+  <servlet-mapping>
+<servlet-name>header</servlet-name>
+<url-pattern>/header</url-pattern>
+</servlet-mapping>
+  
+  <servlet-mapping>
+<servlet-name>footer</servlet-name>
+<url-pattern>/footer</url-pattern>
+</servlet-mapping>
+
+ <servlet-mapping>
+<servlet-name>redirect</servlet-name>
+<url-pattern>/redirect</url-pattern>
+</servlet-mapping>
+
+<listener>
+<listener-class>com.Basic.listnerImpl</listener-class>
+</listener>
+
+<listener>
+<listener-class>com.Basic.RequestIistner</listener-class>
+</listener>
+
+
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
